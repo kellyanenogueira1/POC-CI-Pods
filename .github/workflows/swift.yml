@@ -1,7 +1,7 @@
 name: Cache, Build & Test
 
 on:
-  pushes:
+  push:
     branches: 
       - main
 
