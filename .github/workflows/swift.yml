@@ -1,0 +1,44 @@
+name: Cache, Build & Test
+
+on:
+  pushes:
+    branches: 
+      - main
+
+jobs:
+  test:
+
+    name: Cache, Build & Test
+    env:
+      SCHEME: "POC-CI-Pods"
+      DEVICE: "iPhone 12"
+      DERIVED_DATA_PATH: "DerivedData"
+
+    runs-on: macos-latest
+    strategy:
+      matrix:
+        destination: ['platform=iOS Simulator,OS=14.4,name=iPhone 12']
+
+    steps:
+
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Cache
+        uses: actions/cache@v2
+        id: pods-cache
+        with:
+            path: Pods
+            key: ${{ runner.os }}-pods-${{ hashFiles('**/Podfile.lock') }}
+            restore-keys: |
+              ${{ runner.os }}-pods-
+
+      - name: Install Pods
+        run: |
+          pod install
+
+      - name: Build and Test
+        run: |
+          xcodebuild clean test -workspace POC-CI-Pods.xcworkspace -scheme POC-CI-Pods -destination "${destination}" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
+        env: 
+          destination: ${{ matrix.destination }} 
