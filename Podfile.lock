@@ -1,0 +1,160 @@
+PODS:
+  - ActionSheetPicker-3.0 (2.7.1)
+  - ActiveLabel (1.1.0)
+  - Alamofire (5.4.4)
+  - AlamofireImage (4.2.0):
+    - Alamofire (~> 5.4)
+  - AlamofireNetworkActivityLogger (3.4.0):
+    - Alamofire (~> 5.4.0)
+  - ATHMultiSelectionSegmentedControl (0.2.2)
+  - CardIO (5.4.1)
+  - CropViewController (2.6.0)
+  - CryptoSwift (1.4.1)
+  - Disk (0.6.4)
+  - DrawerKit (0.7.0)
+  - DynamicBlurView (4.1.0)
+  - FontAwesome.swift (1.9.1)
+  - iCarousel (1.8.3)
+  - ImageSlideshow (1.9.2):
+    - ImageSlideshow/Core (= 1.9.2)
+  - ImageSlideshow/Core (1.9.2)
+  - IQKeyboardManager (6.5.6)
+  - M13Checkbox (3.4.0)
+  - NVActivityIndicatorView (5.1.1):
+    - NVActivityIndicatorView/Base (= 5.1.1)
+  - NVActivityIndicatorView/Base (5.1.1)
+  - NVActivityIndicatorView/Extended (5.1.1):
+    - NVActivityIndicatorView/Base
+  - paper-onboarding (6.1.5)
+  - PinterestSegment (1.2.3)
+  - PopupDialog (1.1.1):
+    - DynamicBlurView (~> 4.0)
+  - Realm (10.15.1):
+    - Realm/Headers (= 10.15.1)
+  - Realm/Headers (10.15.1)
+  - RealmSwift (10.15.1):
+    - Realm (= 10.15.1)
+  - Segmentio (4.1)
+  - SkeletonView (1.25.1)
+  - SkyFloatingLabelTextField (4.0.0)
+  - SnapKit (5.0.1)
+  - SwiftDate (6.3.1)
+  - SwiftMessages (9.0.4):
+    - SwiftMessages/App (= 9.0.4)
+  - SwiftMessages/App (9.0.4)
+  - SwiftRichString (3.7.2)
+  - SwiftyJSON (5.0.1)
+  - SwiftyRSA (1.7.0):
+    - SwiftyRSA/ObjC (= 1.7.0)
+  - SwiftyRSA/ObjC (1.7.0)
+  - TBEmptyDataSet (3.0)
+
+DEPENDENCIES:
+  - ActionSheetPicker-3.0
+  - ActiveLabel
+  - Alamofire
+  - AlamofireImage
+  - AlamofireNetworkActivityLogger
+  - ATHMultiSelectionSegmentedControl
+  - CardIO
+  - CropViewController
+  - CryptoSwift
+  - Disk
+  - DrawerKit
+  - DynamicBlurView
+  - FontAwesome.swift
+  - iCarousel
+  - ImageSlideshow
+  - IQKeyboardManager
+  - M13Checkbox
+  - NVActivityIndicatorView
+  - NVActivityIndicatorView/Extended
+  - paper-onboarding
+  - PinterestSegment
+  - PopupDialog
+  - RealmSwift
+  - Segmentio
+  - SkeletonView
+  - SkyFloatingLabelTextField
+  - SnapKit
+  - SwiftDate
+  - SwiftMessages (= 9.0.4)
+  - SwiftRichString
+  - SwiftyJSON
+  - SwiftyRSA
+  - TBEmptyDataSet
+
+SPEC REPOS:
+  trunk:
+    - ActionSheetPicker-3.0
+    - ActiveLabel
+    - Alamofire
+    - AlamofireImage
+    - AlamofireNetworkActivityLogger
+    - ATHMultiSelectionSegmentedControl
+    - CardIO
+    - CropViewController
+    - CryptoSwift
+    - Disk
+    - DrawerKit
+    - DynamicBlurView
+    - FontAwesome.swift
+    - iCarousel
+    - ImageSlideshow
+    - IQKeyboardManager
+    - M13Checkbox
+    - NVActivityIndicatorView
+    - paper-onboarding
+    - PinterestSegment
+    - PopupDialog
+    - Realm
+    - RealmSwift
+    - Segmentio
+    - SkeletonView
+    - SkyFloatingLabelTextField
+    - SnapKit
+    - SwiftDate
+    - SwiftMessages
+    - SwiftRichString
+    - SwiftyJSON
+    - SwiftyRSA
+    - TBEmptyDataSet
+
+SPEC CHECKSUMS:
+  ActionSheetPicker-3.0: 36da254b97a09ff89679ecb8b8510bd3e5bdc773
+  ActiveLabel: 5e3f4de79a1952d4604b845a0610d4776e4b82b3
+  Alamofire: f3b09a368f1582ab751b3fff5460276e0d2cf5c9
+  AlamofireImage: 34a2d90b0e5fe6a5605f85ae4b7b01e784c60192
+  AlamofireNetworkActivityLogger: 162ab8aee00e6267a4304d7cc134e13ccfe3bcc5
+  ATHMultiSelectionSegmentedControl: 0eaa37e53fe35677dccb27d8a4d66f6e8f167fe8
+  CardIO: 56983b39b62f495fc6dae9ad7cf875143df06443
+  CropViewController: 7093b39ec3cb508531b22d35773e06cecd7378d8
+  CryptoSwift: 0bc800a7e6a24c4fc9ebeab97d44b0d5f73a78bd
+  Disk: dcee5c2e98fb72f9a924cde8da8435b08244a80e
+  DrawerKit: 704a618190366883302c7a0895b246fab88cf73b
+  DynamicBlurView: 58e18fae80bb614e34681a4486870e7d257b62e8
+  FontAwesome.swift: 6b52cb7be66eacd28cbfaa0ca7ffd0de4a186a1d
+  iCarousel: d782f635afac190c49bb8ee455882284cff8b85f
+  ImageSlideshow: be305b54eaf2b2cfc7a7141c7c734605d44dc07d
+  IQKeyboardManager: 2a6e97afdafc7becf0cb17a9a8d795e3a980717f
+  M13Checkbox: 6f59404540ac98ba83a3d1afac335895a40c6a5d
+  NVActivityIndicatorView: 1f6c5687f1171810aa27a3296814dc2d7dec3667
+  paper-onboarding: fede1799b1da6988f3788e3b71654583c6f3bce1
+  PinterestSegment: 3dd673ffd9feb00dc7816bb1e503d70459e8eaa8
+  PopupDialog: 720c92befd8bc23c13442254945213db5612f149
+  Realm: fbcbde2620d51623cc5b18e28f5b165c39abef52
+  RealmSwift: e4bea8e42efad3d543aea23b56504069c6faaea2
+  Segmentio: ab29def64e1bff6e6e9b97671788a99bed3f1d9f
+  SkeletonView: 77079530e1348a72f48b79ae30dcb966c1b18b6a
+  SkyFloatingLabelTextField: 79ddc40e4ad59707fedbb48d605417aee48bb78a
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  SwiftDate: 72d28954e8e1c6c1c0f917ccc8005e4f83c7d4b2
+  SwiftMessages: 082ed63613a49fa8e749cd6000bb0a8b9bbc736f
+  SwiftRichString: d61b807db1f8834c26fee92b6dd3e1be2dc5af03
+  SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
+  SwiftyRSA: 8c6dd1ea7db1b8dc4fb517a202f88bb1354bc2c6
+  TBEmptyDataSet: 349add79095bf66d0d11ef9464edd1a8cf5354b5
+
+PODFILE CHECKSUM: 4863e518fc38cca9ef19dfe1ff5536d466ed36f1
+
+COCOAPODS: 1.11.2
