@@ -17,7 +17,7 @@ jobs:
     runs-on: macos-latest
     strategy:
       matrix:
-        destination: ['platform=iOS Simulator,OS=14.5,name=iPhone 12']
+        destination: ['platform=iOS Simulator,OS=14.4,name=iPhone 11']
 
     steps:
 
@@ -38,7 +38,7 @@ jobs:
           pod install
 
       - name: Force xcode 11
-        run: sudo xcode-select -switch /Applications/Xcode_11.3.app
+        run: sudo xcode-select -switch /Applications/Xcode_12.5.app
         
       - name: iPhone 11 Test
         run: xcodebuild clean test -project "POC-CI-Pods.xcodeproj" -scheme "POC-CI-Pods" -destination "platform=iOS Simulator,name=iPhone 11 Pro Max,OS=latest"
