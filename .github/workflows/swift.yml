@@ -17,7 +17,7 @@ jobs:
     runs-on: macos-latest
     strategy:
       matrix:
-        destination: ['platform=iOS Simulator,OS=14.4,name=iPhone 11']
+        destination: ['platform=iOS Simulator,OS=14.5,name=iPhone 11']
 
     steps:
 
@@ -41,6 +41,6 @@ jobs:
         run: sudo xcode-select -switch /Applications/Xcode_11.3.app
         
       - name: iPhone 11 Test
-        run: xcodebuild clean test -workspace POC-CI-Pods.xcworkspace -scheme POC-CI-Pods -destination "${destination}" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
+        run: xcodebuild clean test -workspace POC-CI-Pods.xcworkspace -scheme POC-CI-Pods -destination "${destination}"
         env: 
           destination: ${{ matrix.destination }} 
