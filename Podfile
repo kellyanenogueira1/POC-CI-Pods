@@ -16,7 +16,6 @@ target 'POC-CI-Pods' do
   pod 'PopupDialog'
   pod 'paper-onboarding'
   pod 'SkyFloatingLabelTextField'
-  pod 'SnapKit'
   pod 'SwiftMessages', '9.0.4'
   pod 'NVActivityIndicatorView'
   pod 'NVActivityIndicatorView/Extended'

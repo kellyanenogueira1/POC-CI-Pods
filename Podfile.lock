@@ -37,7 +37,6 @@ PODS:
   - Segmentio (4.1)
   - SkeletonView (1.25.1)
   - SkyFloatingLabelTextField (4.0.0)
-  - SnapKit (5.0.1)
   - SwiftDate (6.3.1)
   - SwiftMessages (9.0.4):
     - SwiftMessages/App (= 9.0.4)
@@ -76,7 +75,6 @@ DEPENDENCIES:
   - Segmentio
   - SkeletonView
   - SkyFloatingLabelTextField
-  - SnapKit
   - SwiftDate
   - SwiftMessages (= 9.0.4)
   - SwiftRichString
@@ -112,7 +110,6 @@ SPEC REPOS:
     - Segmentio
     - SkeletonView
     - SkyFloatingLabelTextField
-    - SnapKit
     - SwiftDate
     - SwiftMessages
     - SwiftRichString
@@ -147,7 +144,6 @@ SPEC CHECKSUMS:
   Segmentio: ab29def64e1bff6e6e9b97671788a99bed3f1d9f
   SkeletonView: 77079530e1348a72f48b79ae30dcb966c1b18b6a
   SkyFloatingLabelTextField: 79ddc40e4ad59707fedbb48d605417aee48bb78a
-  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SwiftDate: 72d28954e8e1c6c1c0f917ccc8005e4f83c7d4b2
   SwiftMessages: 082ed63613a49fa8e749cd6000bb0a8b9bbc736f
   SwiftRichString: d61b807db1f8834c26fee92b6dd3e1be2dc5af03
@@ -155,6 +151,6 @@ SPEC CHECKSUMS:
   SwiftyRSA: 8c6dd1ea7db1b8dc4fb517a202f88bb1354bc2c6
   TBEmptyDataSet: 349add79095bf66d0d11ef9464edd1a8cf5354b5
 
-PODFILE CHECKSUM: 4863e518fc38cca9ef19dfe1ff5536d466ed36f1
+PODFILE CHECKSUM: 395f90cedfbc7f40727c2fd4736dc6409fa92e1c
 
 COCOAPODS: 1.11.2
