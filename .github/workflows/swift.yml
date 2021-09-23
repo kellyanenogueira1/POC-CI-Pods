@@ -3,22 +3,22 @@ name: Cache, Build & Test
 on:
   push:
     branches: 
-      - actions
+      - main
 
 jobs:
   test:
 
     name: Cache, Build & Test
-    #env:
-      #SCHEME: "POC-CI-Pods"
-      #DEVICE: "iPhone 12"
-      #DERIVED_DATA_PATH: "DerivedData"
+    env:
+      SCHEME: "POC-CI-Pods"
+      DEVICE: "iPhone 11"
+      DERIVED_DATA_PATH: "DerivedData"
 
     runs-on: macos-latest
     strategy:
       matrix:
         destination: ['platform=iOS Simulator,OS=14.5,name=iPhone 11']
-
+        
     steps:
 
       - name: Checkout
@@ -32,15 +32,13 @@ jobs:
             key: ${{ runner.os }}-pods-${{ hashFiles('**/Podfile.lock') }}
             restore-keys: |
               ${{ runner.os }}-pods-
-
+              
       - name: Install Pods
         run: |
           pod install
           
-      - name: Force xcode 11
-        run: sudo xcode-select -switch /Applications/Xcode_11.3.app
-        
-      - name: iPhone 11 Test
-        run: xcodebuild clean test -workspace POC-CI-Pods.xcworkspace -scheme POC-CI-Pods -destination "${destination}"
+      - name: Build and Test
+        run: |
+          xcodebuild clean test -workspace POC-CI-Pods.xcworkspace -scheme POC-CI-Pods -destination "${destination}" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
         env: 
-          destination: ${{ matrix.destination }} 
+          destination: ${{ matrix.destination }}
