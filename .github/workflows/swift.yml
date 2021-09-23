@@ -40,6 +40,6 @@ jobs:
       - name: Build and Test
         run: |
             xcrun simctl list
-            xcodebuild clean test -workspace Letrando/Letrando.xcworkspace -scheme Letrando -destination "${destination}" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
+            xcodebuild clean test -workspace POC-CI-Pods.xcworkspace -scheme POC-CI-Pods -destination "${destination}" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
         env: 
           destination: ${{ matrix.destination }} 
