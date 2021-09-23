@@ -9,10 +9,10 @@ jobs:
   test:
 
     name: Cache, Build & Test
-    #env:
-      #SCHEME: "POC-CI-Pods"
-      #DEVICE: "iPhone 12"
-      #DERIVED_DATA_PATH: "DerivedData"
+    env:
+      SCHEME: "POC-CI-Pods"
+      DEVICE: "iPhone 12"
+      DERIVED_DATA_PATH: "DerivedData"
 
     runs-on: macos-latest
     strategy:
