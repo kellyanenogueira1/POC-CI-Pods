@@ -3,7 +3,7 @@ name: Cache, Build & Test
 on:
   push:
     branches: 
-      - main
+      - actions
 
 jobs:
   test:
@@ -36,10 +36,8 @@ jobs:
       - name: Install Pods
         run: |
           pod install
-
-      - name: Build and Test
-        run: |
-            xcrun simctl list
-            xcodebuild clean test -workspace POC-CI-Pods.xcworkspace -scheme POC-CI-Pods -destination "${destination}" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
-        env: 
-          destination: ${{ matrix.destination }} 
+          
+      - name: Force xcode 11
+        run: sudo xcode-select -switch /Applications/Xcode_11.3.app
+      - name: iPhone 11 Test
+        run: xcodebuild test -scheme POC-CI-Pods -workspace POC-CI-Pods.xcworkspace -destination ‘platform=iOS Simulator,name=iPhone 11,OS=14.4’
