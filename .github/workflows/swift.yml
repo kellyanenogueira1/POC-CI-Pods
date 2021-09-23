@@ -41,6 +41,7 @@ jobs:
         run: sudo xcode-select -switch /Applications/Xcode_11.3.app
         
       - name: iPhone 11 Test
-        run: xcodebuild test -scheme POC-CI-Pods -workspace POC-CI-Pods.xcworkspace -destination ‘platform=iOS Simulator,name=iPhone 11,OS=13.3’
-        env: 
-          destination: ${{ matrix.destination }}
+        run: xcodebuild clean test -project "POC-CI-Pods.xcodeproj" -scheme "POC-CI-Pods" -destination "platform=iOS Simulator,name=iPhone 11 Pro Max,OS=latest"
+     
+      - name: Build App
+        run: xcodebuild -project "POC-CI-Pods.xcodeproj" -scheme "POC-CI-Pods" -destination "generic/platform=iOS" -configuration Release build CODE_SIGNING_ALLOWED=NO
