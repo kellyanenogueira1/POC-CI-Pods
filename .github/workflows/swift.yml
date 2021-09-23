@@ -9,10 +9,10 @@ jobs:
   test:
 
     name: Cache, Build & Test
-    env:
-      SCHEME: "POC-CI-Pods"
-      DEVICE: "iPhone 12"
-      DERIVED_DATA_PATH: "DerivedData"
+    #env:
+      #SCHEME: "POC-CI-Pods"
+      #DEVICE: "iPhone 12"
+      #DERIVED_DATA_PATH: "DerivedData"
 
     runs-on: macos-latest
     strategy:
@@ -39,6 +39,6 @@ jobs:
 
       - name: Build and Test
         run: |
-          xcodebuild clean test -workspace POC-CI-Pods/POC-CI-Pods.xcworkspace -scheme POC-CI-Pods -destination "platform=iOS Simulator,name=iPhone 12 Pro"
+          xcodebuild clean test -workspace POC-CI-Pods.xcworkspace -scheme POC-CI-Pods -destination "platform=iOS Simulator,name=iPhone 12 Pro"
         env: 
           destination: ${{ matrix.destination }} 
