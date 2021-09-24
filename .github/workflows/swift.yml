@@ -33,13 +33,8 @@ jobs:
         run: |
           pod install
       - name: Build and Test
-        uses: sersoft-gmbh/xcodebuild-action@v1
-        with:
-          workspace: POC-CI-Pods.xcworkspace
-          scheme: POC-CI-Pods
-          destination: platform="iOS Simulator",name="iPhone 11",OS=14.4
-          action: test
-          enable-code-coverage: true
+        run: |
+          xcodebuild test -scheme POC-CI-Pods -workspace POC-CI-Pods.xcworkspace -destination platform="iOS Simulator",name="iPhone 11",OS=14.4 --enable-code-coverage
       
       - name: Test Coverage
         uses: maxep/spm-lcov-action@0.3.0
