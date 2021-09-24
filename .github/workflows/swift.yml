@@ -12,7 +12,7 @@ jobs:
     runs-on: macos-latest
     env:
       SCHEME: "POC-CI-Pods"
-      DEVICE: "iPhone 11"
+      DEVICE: "iPhone 12"
       DERIVED_DATA_PATH: "DerivedData"
 
     steps:
@@ -34,4 +34,4 @@ jobs:
 
       - name: Build and Test
         run: |
-          xcodebuild clean build test -scheme POC-CI-Pods -workspace POC-CI-Pods.xcworkspace -destination platform="iOS Simulator",name="iPhone 11",OS=14.4 | xcpretty
+          xcodebuild test -scheme POC-CI-Pods -workspace POC-CI-Pods.xcworkspace -destination platform="iOS Simulator",name="iPhone 12",OS=latest | xcpretty
