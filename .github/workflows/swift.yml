@@ -4,16 +4,13 @@ on:
   push:
     branches: 
       - main
+      - actions
+      - actions-updated
 
 jobs:
   test:
 
     name: Cache, Build & Test
-    env:
-      SCHEME: "POC-CI-Pods"
-      DEVICE: "iPhone 12"
-      DERIVED_DATA_PATH: "DerivedData"
-
     runs-on: macos-latest
 
     steps:
@@ -28,11 +25,19 @@ jobs:
             key: ${{ runner.os }}-pods-${{ hashFiles('**/Podfile.lock') }}
             restore-keys: |
               ${{ runner.os }}-pods-
-
       - name: Install Pods
         run: |
           pod install
-
       - name: Build and Test
-        run: |
-          xcodebuild test -scheme POC-CI-Pods -workspace POC-CI-Pods.xcworkspace -destination platform="iOS Simulator",name="iPhone 11",OS=14.4
+        uses: sersoft-gmbh/xcodebuild-action@v1
+        with:
+          workspace: POC-CI-Pods.xcworkspace
+          scheme: POC-CI-Pods
+          destination: platform="iOS Simulator",name="iPhone 11",OS=14.4
+          action: test
+          enable-code-coverage: true
+      
+      - name: Test Coverage
+        uses: maxep/spm-lcov-action@0.3.0
+        with:
+          output-file: ./coverage/lcov.info
